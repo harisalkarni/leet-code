@@ -10,7 +10,7 @@
  * @param {ListNode} list2
  * @return {ListNode}
  */
-var mergeTwoLists = function(list1, list2) {
+var mergeTwoLists = function(l1, l2) {
     // initialize a dummy head node
     
     // initialize a crtNode variable to keep track of the current node, starting with the dummy head node
@@ -29,4 +29,19 @@ var mergeTwoLists = function(list1, list2) {
     // if both lists are empty, point crt's link to null
 
     // return merged linked list
+    var mergedHead = { val : -1, next : null },
+        crt = mergedHead;
+    while(l1 && l2) {
+        if(l1.val > l2.val) {
+            crt.next = l2;
+            l2 = l2.next;
+        } else {
+            crt.next = l1;
+            l1 = l1.next;
+        }
+        crt = crt.next;
+    }
+    crt.next = l1 || l2;
+    
+    return mergedHead.next;
 };
