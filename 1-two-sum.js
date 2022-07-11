@@ -13,7 +13,7 @@ var twoSum = function(nums, target) {
 };
 
 
-//FASTER SOLUTION
+//FASTER SOLUTION AND EASY TO UNDERSTAND
 
 var twoSum = function(nums, target) {
     if (nums.length === 2) return [0, 1];
