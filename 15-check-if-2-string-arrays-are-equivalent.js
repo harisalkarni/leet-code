@@ -1,0 +1,27 @@
+/**
+ * @param {string[]} word1
+ * @param {string[]} word2
+ * @return {boolean}
+ */
+ var arrayStringsAreEqual = function(word1, word2) {
+
+    // one line code
+    return word1.join("") === word2.join("");
+    
+};
+
+// iteration method
+var arrayStringsAreEqual = function(word1, word2) {
+
+    let str1 = "";
+    let str2 = "";
+
+    for(let i = 0; i < word1.length; i++){
+        str1 = str1 + word1[i];
+    }
+    for(let i = 0; i < word2.length; i++){
+        str2 = str2 + word2[i];
+    }
+    return str1 === str2;
+    
+};
